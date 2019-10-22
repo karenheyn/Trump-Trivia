@@ -38,4 +38,33 @@ question5 = new Card('How many times had Trump been sued?',
 130,
 1500)
 
-question6 = new Card('')
+question6 = new Card('Trump won a razzie for his perfmance in which film?',
+'Ghosts Cant do it',
+'Zoolander',
+'Home Alone 2',
+'Sex & the City'
+)
+
+question7 = new Card('According to the don himself, who cuts his hair?',
+'Melania Trump',
+'Paul Mitchell',
+'Tiffany Trump',
+'The Mar-a-lago Salon')
+
+question8 = new Card('What is Donald afraid of?',
+'germs',
+'Hillary',
+'spiders',
+'Iran')
+
+question9 = new Card('How many times has Don tweeted since he became president?',
+'over 17,000 tweets',
+'between 10,000 to 13,000 tweets',
+'between 5000 and 9000 tweets',
+'under 5000 tweets')
+
+question10 = new Card('What year did Donald appear on WWE?',
+2009,
+2001,
+1998,
+2013)
