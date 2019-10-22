@@ -10,6 +10,11 @@ class Card {
         this.bogus2 = bogus2;
         this.bogus3 = bogus3;
     }
+    // makeTrue(){
+    //     for (let i = 0; i< Card.length; i++){
+    //         this.answer === false;
+    //     }
+    // }
 }
 
 let question1 = new Card('When is the Don\'s birhday?',
@@ -115,14 +120,35 @@ class Game {
     startGame(){
         
         button.addEventListener('click', function(evt){
-            console.log(evt.target)
+            evt.preventDefault();
             questionDiv.innerText = board.allCards[0].question
             for (let i=0;i<choices.length;i++){
                 choices[i].innerText = board.answers[0][i]
             }
         })
+        for (let i = 0; i< choices.length; i++){
+            choices[i].addEventListener('click',function(evt){
+                evt.preventDefault();
+                console.log(evt.target)
+                if (choices[i].innerText === 'June 14, 1946'){
+                console.log('its working')
+                }
+            })
+        }
+
     }
+    
 }
+// question1.makeTrue();
+// question2.makeTrue();
+// question3.makeTrue();
+// question4.makeTrue();
+// question5.makeTrue();
+// question6.makeTrue();
+// question7.makeTrue();
+// question8.makeTrue();
+// question9.makeTrue();
+// question10.makeTrue();
 let board = new Board();
 board.makeCardsArray();
 board.getAnswers();
