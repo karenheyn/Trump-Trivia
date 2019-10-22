@@ -73,7 +73,7 @@ let question10 = new Card('What year did Donald appear on WWE?',
     1998,
     2013)
 
-let choices = document.querySelectorAll('choices')
+let choices = document.querySelectorAll('.choices')
 
 
 class Board {
@@ -118,7 +118,7 @@ class Game {
             console.log(evt.target)
             questionDiv.innerText = board.allCards[0].question
             for (let i=0;i<choices.length;i++){
-                choices[i].innerText = board.answers[0][0]
+                choices[i].innerText = board.answers[0][i]
             }
         })
     }
