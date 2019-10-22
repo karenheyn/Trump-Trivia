@@ -1,3 +1,8 @@
+const allQuestions = [];
+
+questionDiv = document.querySelector('.question')
+
+
 class Card{
     constructor (question , answer, bogus, bogus2, bogus3){
     this.question = question;
@@ -68,3 +73,11 @@ question10 = new Card('What year did Donald appear on WWE?',
 2001,
 1998,
 2013)
+
+let answers = document.querySelectorAll('answer')
+document.addEventListener('click', function(evt){
+    console.log(evt.target)
+})
+
+allQuestions.push(question1,question2,question3,question4,question5,question6, question7, question8, question9, question10)
+
