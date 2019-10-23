@@ -1,13 +1,50 @@
 * {
     margin: 0 auto;
 }
+
+body {
+    background-image: url(luke-stackpoole--gy4s9SQ1RI-unsplash.jpg);
+    background-color: #cccccc;
+    background-size: 50%;
+   }
+
 .question {
     text-align: center;
+    color:rgba(174, 9, 9, 0.934);
 }
+
 h1 {
     text-align: center;
     color: white;
 }
+
 header {
-    background: red;
+    background: rgba(97,130,128,.5);
+    position: sticky;
+    ;
 }
+
+.btn {
+    height: 30%;
+    width: 30%;
+    background: transparent;
+    border: 1px solid black;
+}
+
+.list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding:0;
+}
+
+.choices {
+    list-style: none;
+    padding: 13px;
+
+}
+.choices:hover {
+    background-color: rgba(97,130,128,.5);
+  }
