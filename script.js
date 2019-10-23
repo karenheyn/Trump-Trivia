@@ -1,7 +1,6 @@
 button = document.querySelector('.btn')
 questionDiv = document.querySelector('.question')
 
-
 class Card {
     constructor(question, answer, bogus, bogus2, bogus3) {
         this.question = question;
@@ -10,11 +9,6 @@ class Card {
         this.bogus2 = bogus2;
         this.bogus3 = bogus3;
     }
-    // makeTrue(){
-    //     for (let i = 0; i< Card.length; i++){
-    //         this.answer === false;
-    //     }
-    // }
 }
 
 let question1 = new Card('When is the Don\'s birhday?',
@@ -36,8 +30,8 @@ let question3 = new Card('Donald Trump is the _ president of the US',
     '48th')
 
 let question4 = new Card('What does Trump eat at McDonalds?',
-    '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake',
-    '1 McRib, 2 20pc McNuggets, lg diet coke',
+    '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake',
+    '1 McRib, 2 20pc McNuggets, Lg diet coke',
     '1 McDouble, large fries, fruit and yogurt parfeit',
     '2 Quarter-pounders w/ cheese, crispy chicken sandwich, oreo McFlurry'
 )
@@ -48,7 +42,7 @@ let question5 = new Card('How many times had Trump been sued?',
     '1500')
 
 let question6 = new Card('Trump won a razzie for his perfmance in which film?',
-    'Ghosts Cant do it',
+    'Ghosts Can\'t do it',
     'Zoolander',
     'Home Alone 2',
     'Sex & the City'
@@ -61,16 +55,16 @@ let question7 = new Card('According to the don himself, who cuts his hair?',
     'The Mar-a-lago Salon')
 
 let question8 = new Card('What is Donald afraid of?',
-    'germs',
+    'Germs',
     'Hillary',
-    'spiders',
+    'Spiders',
     'Iran')
 
 let question9 = new Card('How many times has Don tweeted since he became president?',
-    'over 17,000 tweets',
-    'between 10,000 to 13,000 tweets',
-    'between 5000 and 9000 tweets',
-    'under 5000 tweets')
+    'Over 17,000 tweets',
+    'Between 10,000 to 13,000 tweets',
+    'Between 5000 and 9000 tweets',
+    'Under 5000 tweets')
 
 let question10 = new Card('What year did Donald appear on WWE?',
     '2009',
@@ -113,12 +107,11 @@ class Board {
         return this.answers
     }
 }
+let score = 0
 class Game {
     constructor() {
-        
     }
     startGame(){
-        
         button.addEventListener('click', function(evt){
             evt.preventDefault();
             questionDiv.innerText = board.allCards[0].question
@@ -140,62 +133,73 @@ class Game {
                 switch(choices[i].innerText){
                     case 'June 14, 1946':
                     console.log('yay');
-                    board.answers.shift()
-                    board.allCards.shift()
+                    board.answers.shift();
+                    board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
                     case 'Marla Maples':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
                     case '45th':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
-                    case '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake':
+                    case '2 Big Macs, 2 Filet-o-fish,Lg chocolate milkshake':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
                     case '3500':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
-                    case 'Ghosts Cant do it':
+                    case 'Ghosts Can\'t do it':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
                     case 'Melania Trump':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
-                    case 'germs':
+                    case 'Germs':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
-                    case 'over 17,000 tweets':
+                    case 'Over 17,000 tweets':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
+                    score++;
                     game.playRound();
                     break;
                     case '2009':
                     console.log('yay');
                     alert('you know Donny!')
                     break;
+                    default:
+                    console.log('try again')
                 }
             })
         }
@@ -206,6 +210,6 @@ let board = new Board();
 board.makeCardsArray();
 board.getAnswers();
 board.shuffle();
-let game = new Game();
+let game = new Game(0);
 game.startGame();
 game.checkForMatch();
