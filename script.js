@@ -1,5 +1,9 @@
 button = document.querySelector('.btn')
 questionDiv = document.querySelector('.question')
+animation = document.querySelector('.animation')
+scoreDiv = document.querySelector('.score')
+animation.classList.add('hidden')
+questionDiv.classList.add('faded')
 function fetchThis(){
     fetch("https://api.tronalddump.io/random/quote", {
         headers: {
@@ -42,12 +46,12 @@ let question2 = new Card('Who is Donalds second wife?',
     'Marla Maples',
     'Goldie Hawn',
     'Ivanka Trump',
-    'Melania Trump')
+    'Ivana Trump')
 
-let question3 = new Card('Donald Trump is the _ president of the US',
+let question3 = new Card('Donald Trump is the ___ president of the US',
     '45th',
     '46th',
-    '41th',
+    '41st',
     '48th')
 
 let question4 = new Card('What does Trump eat at McDonalds?',
@@ -153,23 +157,15 @@ class Game {
         for (let i = 0; i < choices.length; i++) {
             choices[i].addEventListener('click', function (evt) {
                 evt.preventDefault();
-                // fetch("https://api.tronalddump.io/random/quote", {
-                //         headers: {
-                //             Accept: "application/hal+json"
-                //         }
-                //     })
-                //     .then(res => {
-                //         return res.json()
-                //     })
-                //     .then(res => {
-                //         console.log("success!", res)
 
                         switch (choices[i].innerText) {
                             case 'June 14, 1946':
+                                animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 // let quoteP = document.createElement("p");
                                 // quoteP.innerText = res.value;
@@ -179,75 +175,97 @@ class Game {
                                 game.playRound();
                                 break;
                             case 'Marla Maples':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case '45th':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case '3500':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case 'Ghosts Can\'t do it':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case 'Melania Trump':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case 'Germs':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case 'Over 17,000 tweets':
+                                    animation.classList.add('hidden')
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                scoreDiv.innerText = score;
                                 fetchThis();
                                 game.playRound();
                                 break;
                             case '2009':
+                                    animation.classList.add('hidden')
+                                    score++;
+                                    scoreDiv.innerText = score;
                                 console.log('yay');
                                 alert('you know Donny!')
                                 break;
                             default:
                                 quote.innerText ='Donald says: YOUR\'E FIRED '
+                                animation.classList.remove('hidden')
+                                score--;
+                                scoreDiv.innerText = score;
                                 console.log('try again')
                         }
 

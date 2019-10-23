@@ -5,8 +5,8 @@
 body {
     background-image: url(pawel-czerwinski-O5uri6kQHQQ-unsplash.jpg);
     background-color: #cccccc;
-    background-size: 130%;
-    height: 600px;
+    background-size: cover;
+    height: 700px;
     
    }
 h4{
@@ -15,7 +15,12 @@ h4{
 }
 .question {
     text-align: center;
-    color:rgb(189,0,33);
+    background-color:rgba(189,0,33,.5);
+    color: white;
+    font-size:18px;
+    padding: 7px;
+    position:sticky
+
 }
 
 h1 {
@@ -40,6 +45,7 @@ header {
     left: 35%;
     margin-top:50px;
     color: white;
+    z-index: 1;
 }
 
 .list {
@@ -53,27 +59,66 @@ header {
 
 .choices {
     list-style: none;
-    padding: 13px;
-    color:rgb(189,0,33);
+    padding: 10px;
+    color: white;
     font-size:20px;
-    
+    background-color: rgba(57,90,165,.5);
 
 }
 .choices:hover {
-    background-color: rgba(57,90,165,.5);
+    background-color: rgba(57,90,165,.8);
     /* border-radius:10px; */
   }
 .hidden {
     display:none
 }
+.score{
+    position: absolute;
+    right: 2px;
+    top: 10%;
+    color: white;
+}
 .quote{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color:rgb(39, 62, 114);
+    padding-top: 5px;
+    font-size:20px;
 }
 .animation{
     background-image: url(4-trump.png);
     height: 121px;
     width: 80px;
     background-size: cover;
+    animation: move 5s ease-out;
+    animation-iteration-count: 1;
+    position: absolute;
+    left:12%;
+    z-index: 1;
+    margin-top:10px;
+}
+@keyframes move{
+    from {
+        margin-left: 100%;
+        rotate: 0;
+        transform:rotate(0deg)
+    }
 
+    to {
+        margin-left: 0%;
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.faded{
+    animation: fadein 4s;
+    animation-iteration-count: initial;
 }
