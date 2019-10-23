@@ -21,22 +21,6 @@ function fetchThis(){
           console.log("something went wrong...", err)
       })
 }
-// const url = 'https://api.tronalddump.io/random/meme'
-
-// fetch("https://api.tronalddump.io/random/quote", {
-//   headers: {
-//     Accept: "application/hal+json"
-//   }
-// })
-// 	.then(res => {
-// 		return res.json()
-// 	})
-// 	.then(res => {
-// 		console.log("success!", res)
-// 	})
-// .catch(err => {
-// 	console.log("something went wrong...", err)
-// })
 
 class Card {
     constructor(question, answer, bogus, bogus2, bogus3) {
