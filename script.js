@@ -126,75 +126,6 @@ class Game {
                 choices[i].innerText = board.answers[0][i]
             }
         })
-    
-        // for (let i = 0; i< choices.length; i++){
-        //     choices[i].addEventListener('click',function(evt){
-        //         evt.preventDefault();
-        //         switch(choices[i].innerText){
-        //             case 'June 14, 1946':
-        //             console.log('yay');
-        //             board.answers[0].shift()
-        //             board.allCards.shift()
-        //             startGame();
-        //             break;
-        //             case 'Marla Maples':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case '45th':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case 3500:
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case 'Ghosts Cant do it':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case 'Melania Trump':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case 'germs':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case 'over 17,000 tweets':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //             case 'June 14, 1946':
-        //             console.log('yay');
-        //             board.answers[0].shift();
-        //             board.allCards.shift();
-        //             startGame();
-        //             break;
-        //         }
-        //     })
-        // }
-
     }
     playRound(){
         questionDiv.innerText = board.allCards[0].question
@@ -263,29 +194,18 @@ class Game {
                     break;
                     case '2009':
                     console.log('yay');
-                    alert('you know Donny')
+                    alert('you know Donny!')
                     break;
                 }
             })
         }
     }
 }
-// question1.makeTrue();
-// question2.makeTrue();
-// question3.makeTrue();
-// question4.makeTrue();
-// question5.makeTrue();
-// question6.makeTrue();
-// question7.makeTrue();
-// question8.makeTrue();
-// question9.makeTrue();
-// question10.makeTrue();
+
 let board = new Board();
 board.makeCardsArray();
 board.getAnswers();
 board.shuffle();
-// let round = new Round();
-// round.displayCards();
 let game = new Game();
 game.startGame();
 game.checkForMatch();
