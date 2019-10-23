@@ -129,42 +129,68 @@ class Game {
         for (let i = 0; i< choices.length; i++){
             choices[i].addEventListener('click',function(evt){
                 evt.preventDefault();
-                console.log(evt.target)
-                // if (choices[i].innerText === 'June 14, 1946'){
-                // console.log('its working')
                 switch(choices[i].innerText){
                     case 'June 14, 1946':
                     console.log('yay');
+                    board.answers[0].shift()
+                    board.allCards.shift()
+                    startGame();
                     break;
                     case 'Marla Maples':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case '45th':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case 3500:
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case 'Ghosts Cant do it':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case 'Melania Trump':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case 'germs':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                     case 'over 17,000 tweets':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
-                    case 2009:
+                    case 'June 14, 1946':
                     console.log('yay');
+                    board.answers[0].shift();
+                    board.allCards.shift();
+                    startGame();
                     break;
                 }
-                // }
             })
         }
 
