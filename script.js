@@ -1,5 +1,26 @@
 button = document.querySelector('.btn')
 questionDiv = document.querySelector('.question')
+function fetchThis(){
+    fetch("https://api.tronalddump.io/random/quote", {
+        headers: {
+          Accept: "application/hal+json"
+        }
+      })
+          .then(res => {
+              return res.json()
+          })
+          .then(res => {
+              console.log("success!", res)
+            //   let quote = document.createElement("p");
+                                quote.innerText ='Donald says: ' + res.value;
+                                // quoteP.classList.add("");
+                                // quote.appendChild(quoteP);
+                                console.log(quote)
+          })
+      .catch(err => {
+          console.log("something went wrong...", err)
+      })
+}
 // const url = 'https://api.tronalddump.io/random/meme'
 
 // fetch("https://api.tronalddump.io/random/quote", {
@@ -148,34 +169,37 @@ class Game {
         for (let i = 0; i < choices.length; i++) {
             choices[i].addEventListener('click', function (evt) {
                 evt.preventDefault();
-                fetch("https://api.tronalddump.io/random/quote", {
-                        headers: {
-                            Accept: "application/hal+json"
-                        }
-                    })
-                    .then(res => {
-                        return res.json()
-                    })
-                    .then(res => {
-                        console.log("success!", res)
+                // fetch("https://api.tronalddump.io/random/quote", {
+                //         headers: {
+                //             Accept: "application/hal+json"
+                //         }
+                //     })
+                //     .then(res => {
+                //         return res.json()
+                //     })
+                //     .then(res => {
+                //         console.log("success!", res)
+
                         switch (choices[i].innerText) {
                             case 'June 14, 1946':
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
+                                // let quoteP = document.createElement("p");
+                                // quoteP.innerText = res.value;
+                                // // quoteP.classList.add("");
+                                // quote.appendChild(quoteP);
+                                // console.log(quoteP)
                                 game.playRound();
-                                let quoteP = document.createElement("p");
-                                quoteP.innerText = res.value;
-                                // quoteP.classList.add("");
-                                quote.appendChild(quoteP);
-                                console.log(quoteP)
                                 break;
                             case 'Marla Maples':
                                 console.log('yay');
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case '45th':
@@ -183,6 +207,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
@@ -190,6 +215,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case '3500':
@@ -197,6 +223,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case 'Ghosts Can\'t do it':
@@ -204,6 +231,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case 'Melania Trump':
@@ -211,6 +239,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case 'Germs':
@@ -218,6 +247,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case 'Over 17,000 tweets':
@@ -225,6 +255,7 @@ class Game {
                                 board.answers.shift();
                                 board.allCards.shift();
                                 score++;
+                                fetchThis();
                                 game.playRound();
                                 break;
                             case '2009':
@@ -232,85 +263,9 @@ class Game {
                                 alert('you know Donny!')
                                 break;
                             default:
+                                quote.innerText ='Donald says: YOUR\'E FIRED '
                                 console.log('try again')
                         }
-
-                    })
-                    .catch(err => {
-                        console.log("something went wrong...", err)
-                    })
-                
-                // switch (choices[i].innerText) {
-                //     case 'June 14, 1946':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case 'Marla Maples':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case '45th':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case '3500':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case 'Ghosts Can\'t do it':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case 'Melania Trump':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case 'Germs':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case 'Over 17,000 tweets':
-                //         console.log('yay');
-                //         board.answers.shift();
-                //         board.allCards.shift();
-                //         score++;
-                //         game.playRound();
-                //         break;
-                //     case '2009':
-                //         console.log('yay');
-                //         alert('you know Donny!')
-                //         break;
-                //     default:
-                //         console.log('try again')
-                // }
 
             })
         }

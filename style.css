@@ -66,3 +66,14 @@ header {
 .hidden {
     display:none
 }
+.quote{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.animation{
+    background-image: url(4-trump.png);
+    height: 121px;
+    width: 80px;
+    background-size: cover;
+
+}
