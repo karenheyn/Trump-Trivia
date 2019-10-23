@@ -48,7 +48,7 @@ let question6 = new Card('Trump won a razzie for his perfmance in which film?',
     'Sex & the City'
 )
 
-let question7 = new Card('According to the don himself, who cuts his hair?',
+let question7 = new Card('According to Donald himself, who cuts his hair?',
     'Melania Trump',
     'Paul Mitchell',
     'Tiffany Trump',
