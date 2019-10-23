@@ -42,10 +42,10 @@ let question4 = new Card('What does Trump eat at McDonalds?',
     '2 Quarter-pounders w/ cheese, crispy chicken sandwich, oreo McFlurry'
 )
 let question5 = new Card('How many times had Trump been sued?',
-    3500,
-    6000,
-    130,
-    1500)
+    '3500',
+    '6000',
+    '130',
+    '1500')
 
 let question6 = new Card('Trump won a razzie for his perfmance in which film?',
     'Ghosts Cant do it',
@@ -73,10 +73,10 @@ let question9 = new Card('How many times has Don tweeted since he became preside
     'under 5000 tweets')
 
 let question10 = new Card('What year did Donald appear on WWE?',
-    2009,
-    2001,
-    1998,
-    2013)
+    '2009',
+    '2001',
+    '1998',
+    '2013')
 
 let choices = document.querySelectorAll('.choices')
 
@@ -126,76 +126,149 @@ class Game {
                 choices[i].innerText = board.answers[0][i]
             }
         })
+    
+        // for (let i = 0; i< choices.length; i++){
+        //     choices[i].addEventListener('click',function(evt){
+        //         evt.preventDefault();
+        //         switch(choices[i].innerText){
+        //             case 'June 14, 1946':
+        //             console.log('yay');
+        //             board.answers[0].shift()
+        //             board.allCards.shift()
+        //             startGame();
+        //             break;
+        //             case 'Marla Maples':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case '45th':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case 3500:
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case 'Ghosts Cant do it':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case 'Melania Trump':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case 'germs':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case 'over 17,000 tweets':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //             case 'June 14, 1946':
+        //             console.log('yay');
+        //             board.answers[0].shift();
+        //             board.allCards.shift();
+        //             startGame();
+        //             break;
+        //         }
+        //     })
+        // }
+
+    }
+    playRound(){
+        questionDiv.innerText = board.allCards[0].question
+            for (let i=0;i<choices.length;i++){
+                choices[i].innerText = board.answers[0][i]
+            }
+    }
+    checkForMatch(){
         for (let i = 0; i< choices.length; i++){
             choices[i].addEventListener('click',function(evt){
                 evt.preventDefault();
                 switch(choices[i].innerText){
                     case 'June 14, 1946':
                     console.log('yay');
-                    board.answers[0].shift()
+                    board.answers.shift()
                     board.allCards.shift()
-                    startGame();
+                    game.playRound();
                     break;
                     case 'Marla Maples':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
                     case '45th':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
                     case '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
-                    case 3500:
+                    case '3500':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
                     case 'Ghosts Cant do it':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
                     case 'Melania Trump':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
                     case 'germs':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
                     case 'over 17,000 tweets':
                     console.log('yay');
-                    board.answers[0].shift();
+                    board.answers.shift();
                     board.allCards.shift();
-                    startGame();
+                    game.playRound();
                     break;
-                    case 'June 14, 1946':
+                    case '2009':
                     console.log('yay');
-                    board.answers[0].shift();
-                    board.allCards.shift();
-                    startGame();
+                    alert('you know Donny')
                     break;
                 }
             })
         }
-
     }
-    
 }
 // question1.makeTrue();
 // question2.makeTrue();
@@ -215,3 +288,4 @@ board.shuffle();
 // round.displayCards();
 let game = new Game();
 game.startGame();
+game.checkForMatch();
