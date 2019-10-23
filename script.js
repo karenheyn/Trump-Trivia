@@ -130,9 +130,41 @@ class Game {
             choices[i].addEventListener('click',function(evt){
                 evt.preventDefault();
                 console.log(evt.target)
-                if (choices[i].innerText === 'June 14, 1946'){
-                console.log('its working')
+                // if (choices[i].innerText === 'June 14, 1946'){
+                // console.log('its working')
+                switch(choices[i].innerText){
+                    case 'June 14, 1946':
+                    console.log('yay');
+                    break;
+                    case 'Marla Maples':
+                    console.log('yay');
+                    break;
+                    case '45th':
+                    console.log('yay');
+                    break;
+                    case '2 Big Macs, 2 Filet-o-fish,lg chocolate milkshake':
+                    console.log('yay');
+                    break;
+                    case 3500:
+                    console.log('yay');
+                    break;
+                    case 'Ghosts Cant do it':
+                    console.log('yay');
+                    break;
+                    case 'Melania Trump':
+                    console.log('yay');
+                    break;
+                    case 'germs':
+                    console.log('yay');
+                    break;
+                    case 'over 17,000 tweets':
+                    console.log('yay');
+                    break;
+                    case 2009:
+                    console.log('yay');
+                    break;
                 }
+                // }
             })
         }
 
