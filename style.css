@@ -1,3 +1,13 @@
+* {
+    margin: 0 auto;
+}
 .question {
     text-align: center;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+header {
+    background: red;
 }

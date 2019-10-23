@@ -152,7 +152,7 @@ class Game {
                     score++;
                     game.playRound();
                     break;
-                    case '2 Big Macs, 2 Filet-o-fish,Lg chocolate milkshake':
+                    case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
                     console.log('yay');
                     board.answers.shift();
                     board.allCards.shift();
@@ -210,6 +210,6 @@ let board = new Board();
 board.makeCardsArray();
 board.getAnswers();
 board.shuffle();
-let game = new Game(0);
+let game = new Game();
 game.startGame();
 game.checkForMatch();
