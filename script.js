@@ -11,7 +11,7 @@ class Card {
     }
 }
 
-let question1 = new Card('When is the Don\'s birhday?',
+let question1 = new Card('When is the Don\'s birthday?',
     'June 14, 1946',
     'May 12, 1950',
     'August 30, 1942 ',
@@ -73,8 +73,8 @@ let question10 = new Card('What year did Donald appear on WWE?',
     '2013')
 
 let choices = document.querySelectorAll('.choices')
-
-
+let ul = document.querySelector('.list')
+ul.classList.add('hidden')
 class Board {
     constructor() {
         this.allCards = []
@@ -114,6 +114,7 @@ class Game {
     startGame(){
         button.addEventListener('click', function(evt){
             evt.preventDefault();
+            ul.classList.remove('hidden')
             questionDiv.innerText = board.allCards[0].question
             for (let i=0;i<choices.length;i++){
                 choices[i].innerText = board.answers[0][i]
