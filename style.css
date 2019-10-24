@@ -1,7 +1,14 @@
 * {
     margin: 0 auto;
 }
-
+.wall{
+    background-image: url(11-trump.png);
+    height: 300px;
+    width: 330px;
+    margin: 0 auto;
+    background-size:cover;
+    padding: 50px 0px;
+}
 body {
     background-image: url(pawel-czerwinski-O5uri6kQHQQ-unsplash.jpg);
     background-color: #cccccc;
@@ -121,7 +128,6 @@ header {
 @keyframes move{
     from {
         margin-left: 100%;
-        rotate: 0;
         transform:rotate(0deg)
     }
 

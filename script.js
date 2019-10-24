@@ -4,8 +4,10 @@ animation = document.querySelector('.animation')
 scoreDiv = document.querySelector('.score')
 animation.classList.add('hidden')
 questionDiv.classList.add('faded')
-animation2 = document.querySelector('.animation2')
-
+const animation2 = document.querySelector('.animation2')
+const wall = document.querySelector('.wall')
+const wallAudio = document.querySelector('.greatwall')
+const getEmOut = document.querySelector('.getemout')
 function fetchThis() {
     fetch("https://api.tronalddump.io/random/quote", {
             headers: {
@@ -103,6 +105,7 @@ let choices = document.querySelectorAll('.choices')
 let ul = document.querySelector('.list')
 const quote = document.querySelector('.quote')
 ul.classList.add('hidden')
+wall.classList.add('hidden')
 
 class Board {
     constructor() {
@@ -258,15 +261,20 @@ class Game {
                         game.playRound();
                         break;
                     case '2009':
-                        animation.classList.add('hidden')
+                        animation.classList.add('hidden');
                         score++;
                         scoreDiv.innerText = score;
+                        wallAudio.play();
+                        ul.classList.add('hidden');
+                        questionDiv.classList.add('hidden');
+                        wall.classList.remove('hidden')
                         console.log('yay');
                         alert('you know Donny!')
                         break;
                     default:
                         quote.innerText = 'Donald says: YOUR\'E FIRED!'
                         animation.classList.remove('hidden')
+                        getEmOut.play();
                         score--;
                         scoreDiv.innerText = score;
                         console.log('try again')
