@@ -7,6 +7,7 @@ body {
     background-color: #cccccc;
     background-size: cover;
     height: 700px;
+    position:static;
     
    }
 h4{
@@ -18,9 +19,14 @@ h4{
     background-color:rgba(189,0,33,.5);
     color: white;
     font-size:18px;
-    padding: 7px;
-    position:sticky
+    padding: 10px;
+    position:fixed;
+    width: 100%;
+    margin-top: 2%;
 
+}
+.big{
+    font-style: italic;;
 }
 
 h1 {
@@ -30,7 +36,8 @@ h1 {
 
 header {
     background: rgba(57,90,165,.5);
-    position: sticky;
+    position: relative;
+    width: 100%;
 
 }
 
@@ -38,7 +45,7 @@ header {
     height: 30%;
     width: 30%;
     background: transparent;
-    border: 1px solid white;
+    border: 3px solid white;
     font-size:20px;
     height: 50px;
     position:fixed;
@@ -84,6 +91,7 @@ header {
     color:rgb(39, 62, 114);
     padding-top: 5px;
     font-size:20px;
+    background-color: rgba(255, 255, 255, 0.673);
 }
 .animation{
     background-image: url(4-trump.png);
@@ -92,10 +100,23 @@ header {
     background-size: cover;
     animation: move 5s ease-out;
     animation-iteration-count: 1;
-    position: absolute;
+    position: fixed;
     left:12%;
     z-index: 1;
-    margin-top:10px;
+    top:200px;
+}
+.animation2{
+    background-image: url(19-trump.png);
+    height: 160px;
+    width: 100px;
+    background-size: cover;
+    animation: grow 3s ease-in;
+    animation-iteration-count: 1;
+    position: fixed;;
+    left:12%;
+    z-index: 1;
+    bottom:10%;
+    margin 
 }
 @keyframes move{
     from {
@@ -121,4 +142,18 @@ header {
 .faded{
     animation: fadein 4s;
     animation-iteration-count: initial;
+}
+@keyframes grow{
+    from{
+        height:160px;
+        width:100;
+    }
+    50%{
+        height:360px;
+        width: 230px;
+    }
+    to{
+        height:160px;
+        width: 100px;
+    }
 }
