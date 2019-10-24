@@ -8,6 +8,7 @@ const animation2 = document.querySelector('.animation2')
 const wall = document.querySelector('.wall')
 const wallAudio = document.querySelector('.greatwall')
 const getEmOut = document.querySelector('.getemout')
+const winning = document.querySelector('.winning')
 function fetchThis() {
     fetch("https://api.tronalddump.io/random/quote", {
             headers: {
@@ -19,10 +20,7 @@ function fetchThis() {
         })
         .then(res => {
             console.log("success!", res)
-            //   let quote = document.createElement("p");
             quote.innerText = 'Donald says: ' + res.value;
-            // quoteP.classList.add("");
-            // quote.appendChild(quoteP);
             console.log(quote)
         })
         .catch(err => {
@@ -166,23 +164,18 @@ class Game {
 
                 switch (choices[i].innerText) {
                     case 'June 14, 1946':
+                        winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
                         scoreDiv.innerText = score;
                         fetchThis();
-                        // let quoteP = document.createElement("p");
-                        // quoteP.innerText = res.value;
-                        // // quoteP.classList.add("");
-                        // quote.appendChild(quoteP);
-                        // console.log(quoteP)
                         game.playRound();
                         break;
                     case 'Marla Maples':
+                        winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -191,8 +184,8 @@ class Game {
                         game.playRound();
                         break;
                     case '45th':
+                        winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -201,8 +194,8 @@ class Game {
                         game.playRound();
                         break;
                     case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
+                            winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -211,8 +204,8 @@ class Game {
                         game.playRound();
                         break;
                     case '3500':
+                            winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -221,8 +214,8 @@ class Game {
                         game.playRound();
                         break;
                     case 'Ghosts Can\'t do it':
+                            winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -231,8 +224,8 @@ class Game {
                         game.playRound();
                         break;
                     case 'Melania Trump':
+                            winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -241,8 +234,8 @@ class Game {
                         game.playRound();
                         break;
                     case 'Germs':
+                            winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -251,8 +244,8 @@ class Game {
                         game.playRound();
                         break;
                     case 'Over 17,000 tweets':
+                            winning.play();
                         animation.classList.add('hidden')
-                        console.log('yay');
                         board.answers.shift();
                         board.allCards.shift();
                         score++;
@@ -268,8 +261,6 @@ class Game {
                         ul.classList.add('hidden');
                         questionDiv.classList.add('hidden');
                         wall.classList.remove('hidden')
-                        console.log('yay');
-                        alert('you know Donny!')
                         break;
                     default:
                         quote.innerText = 'Donald says: YOUR\'E FIRED!'
@@ -277,7 +268,6 @@ class Game {
                         getEmOut.play();
                         score--;
                         scoreDiv.innerText = score;
-                        console.log('try again')
                 }
 
             })
