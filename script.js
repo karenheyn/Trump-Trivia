@@ -1,7 +1,7 @@
-button = document.querySelector('.btn')
-questionDiv = document.querySelector('.question')
-animation = document.querySelector('.animation')
-scoreDiv = document.querySelector('.score')
+const button = document.querySelector('.btn')
+const questionDiv = document.querySelector('.question')
+const animation = document.querySelector('.animation')
+const scoreDiv = document.querySelector('.score')
 animation.classList.add('hidden')
 questionDiv.classList.add('faded')
 const animation2 = document.querySelector('.animation2')
@@ -9,6 +9,7 @@ const wall = document.querySelector('.wall')
 const wallAudio = document.querySelector('.greatwall')
 const getEmOut = document.querySelector('.getemout')
 const winning = document.querySelector('.winning')
+const tremendous = document.querySelector('.tremendous')
 function fetchThis() {
     fetch("https://api.tronalddump.io/random/quote", {
             headers: {
@@ -99,11 +100,12 @@ let question10 = new Card('What year did Donald appear on WWE?',
     '1998',
     '2013')
 
-let choices = document.querySelectorAll('.choices')
-let ul = document.querySelector('.list')
+const choices = document.querySelectorAll('.choices')
+const ul = document.querySelector('.list')
 const quote = document.querySelector('.quote')
 ul.classList.add('hidden')
 wall.classList.add('hidden')
+tremendous.classList.add('hidden')
 
 class Board {
     constructor() {
@@ -261,6 +263,7 @@ class Game {
                         ul.classList.add('hidden');
                         questionDiv.classList.add('hidden');
                         wall.classList.remove('hidden')
+                        tremendous.classList.remove('hidden')
                         break;
                     default:
                         quote.innerText = 'Donald says: YOUR\'E FIRED!'
