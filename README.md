@@ -5,7 +5,7 @@ Do You Know Trump Trivia
 ## How to Play
 
 Click "start" to begin the game. Each question will appear in the red bar. You must select the correct answer in order to move on to the next question. Each question right will add one point to your score and retrieve a random Donald Trump quote or tweet. Each question wrong will subtract a point.
-The question number you are on appears on the top left corner, and the score appears in the top right corner. When you are done playing the game, click reset to restart. **you're score will not be reset unless you refresh the page.
+The question number you are on appears on the top left corner, and the score appears in the top right corner. When you are done playing the game, click reset to restart. **you're score will not be reset unless you refresh the page. This game is responsive and works on mobile and tablets.
 
 ## Technologies Used
 * HTML
