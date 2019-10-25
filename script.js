@@ -11,6 +11,7 @@ const getEmOut = document.querySelector('.getemout')
 const winning = document.querySelector('.winning')
 const tremendous = document.querySelector('.tremendous')
 const reset = document.querySelector('.reset')
+const questionNum = document.querySelector('.questionNum')
 reset.classList.add('hidden')
 
 function fetchThis() {
@@ -142,12 +143,15 @@ class Board {
         return this.answers
     }
 }
-let score = 0
+let num = 0;
+let score = 0;
 class Game {
     constructor() {}
     startGame() {
         button.addEventListener('click', function (evt) {
             evt.preventDefault();
+            num++;
+            questionNum.innerText = num + "/10";
             ul.classList.remove('hidden')
             animation2.classList.add('hidden')
             questionDiv.innerText = board.allCards[0].question
@@ -157,7 +161,7 @@ class Game {
         })
     }
     playRound() {
-        questionDiv.innerText = board.allCards[0].question
+        questionDiv.innerText = board.allCards[0].question;
         for (let i = 0; i < choices.length; i++) {
             choices[i].innerText = board.answers[0][i]
         }
@@ -169,6 +173,8 @@ class Game {
         board.allCards.shift();
         score++;
         scoreDiv.innerText = score;
+        num++
+        questionNum.innerText = num + "/10"
         quote.classList.remove('animatequote')
         game.playRound();
     }

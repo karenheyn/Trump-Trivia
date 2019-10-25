@@ -10,6 +10,16 @@
     background: transparent;
     width: 40px;
 }
+.questionNum{
+    height: 30px;
+    width: 30px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-family: 'Fredericka the Great', cursive;
+}
 .wall{
     background-image: url(11-trump.png);
     height: 300px;
