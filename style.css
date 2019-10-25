@@ -227,3 +227,22 @@ h1{
     top: 50%;
 }
 }
+@media only screen and (min-width: 750px) {
+h1{
+    font-size: 60px;
+    padding: 50px 50px;
+}
+.choices {
+    font-size: 50px;
+}
+.question{
+    font-size: 40px;
+    height: 200px;
+}
+.btn{
+    top: 500px;
+}
+.quote{
+    font-size: 35px;
+}
+}
