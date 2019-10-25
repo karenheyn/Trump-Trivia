@@ -19,6 +19,7 @@
     top: 5px;
     left: 5px;
     font-family: 'Fredericka the Great', cursive;
+    font-size: 25px;
 }
 .wall{
     background-image: url(11-trump.png);
@@ -129,7 +130,7 @@ header {
     margin-bottom: 20px;
     color:rgb(39, 62, 114);
     padding-top: 5px;
-    font-size:30px;
+    font-size:26px;
     background-color: rgba(255, 255, 255, 0.673);
     font-family:'Josefin Slab', serif
 }
