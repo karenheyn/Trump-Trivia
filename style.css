@@ -8,6 +8,8 @@
     margin: 0 auto;
     background-size:cover;
     padding: 50px 0px;
+
+
 }
 body {
     background-image: url(pawel-czerwinski-O5uri6kQHQQ-unsplash.jpg);
@@ -108,7 +110,7 @@ header {
     margin-bottom: 20px;
     color:rgb(39, 62, 114);
     padding-top: 5px;
-    font-size:13px;
+    font-size:30px;
     background-color: rgba(255, 255, 255, 0.673);
     font-family:'Josefin Slab', serif
 }
@@ -173,4 +175,23 @@ header {
         height:160px;
         width: 100px;
     }
+}
+
+@keyframes movedown{
+    from{ 
+        margin-top: 0px
+    }
+    to {
+        margin-bottom: 100px
+}
+}
+@keyframes blinking{
+    0%{     color: rgb(189,0,33) ;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: rgb(189,0,33) }
+}
+.animatequote{
+    animation: blinking 1s infinite;
 }

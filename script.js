@@ -159,6 +159,16 @@ class Game {
             choices[i].innerText = board.answers[0][i]
         }
     }
+    changePage(){
+        winning.play();
+        animation.classList.add('hidden')
+        board.answers.shift();
+        board.allCards.shift();
+        score++;
+        scoreDiv.innerText = score;
+        quote.classList.remove('animatequote')
+        game.playRound();
+    }
     checkForMatch() {
         for (let i = 0; i < choices.length; i++) {
             choices[i].addEventListener('click', function (evt) {
@@ -166,94 +176,39 @@ class Game {
 
                 switch (choices[i].innerText) {
                     case 'June 14, 1946':
-                        winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
+                        game.changePage();
                         fetchThis();
-                        game.playRound();
                         break;
                     case 'Marla Maples':
-                        winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
+                            game.changePage();
+                            fetchThis();
                         break;
                     case '45th':
-                        winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
+                            game.changePage();
+                            fetchThis();
                         break;
                     case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
-                            winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
-                        break;
+                            game.changePage();
+                            fetchThis();
                     case '3500':
-                            winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
+                            game.changePage();
                         fetchThis();
-                        game.playRound();
                         break;
                     case 'Ghosts Can\'t do it':
-                            winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
+                            game.changePage();
+                            fetchThis();
                         break;
                     case 'Melania Trump':
-                            winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
+                            game.changePage();
+                            fetchThis();
                         break;
                     case 'Germs':
-                            winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
+                            game.changePage();
+                            fetchThis();
                         break;
                     case 'Over 17,000 tweets':
-                            winning.play();
-                        animation.classList.add('hidden')
-                        board.answers.shift();
-                        board.allCards.shift();
-                        score++;
-                        scoreDiv.innerText = score;
-                        fetchThis();
-                        game.playRound();
+                            game.changePage();
+                            fetchThis();
                         break;
                     case '2009':
                         animation.classList.add('hidden');
@@ -271,6 +226,7 @@ class Game {
                         getEmOut.play();
                         score--;
                         scoreDiv.innerText = score;
+                        quote.classList.add('animatequote')
                 }
 
             })
