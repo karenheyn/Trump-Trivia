@@ -14,7 +14,7 @@ The question number you are on appears on the top left corner, and the score app
 * APIs
 
 ## Installation Instructions
-In order to play the game, fork and clone this repository to your computer and open the index.html file.
+In order to play the game, fork and clone this repository to your computer and open the index.html file,or open the site in your browser.
 This game retrieves information from the Tronld Dump API. On some computers, you may have to download the Moesif Cors
 extension for your browser to get the quotes to appear.
 
@@ -24,3 +24,6 @@ I would like to tweak some things in the mobile version, but am overall satisfie
 
 ## Link to Repository
 https://github.com/karenheyn/Trump-Trivia
+
+## Link to Page
+https://karenheyn.github.io/Trump-Trivia/
