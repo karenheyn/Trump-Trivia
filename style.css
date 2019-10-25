@@ -1,6 +1,15 @@
 * {
     margin: 0 auto;
 }
+.reset{
+    text-align: center;
+    position: fixed;
+    left: 47%;
+    color:white;
+    border: 3px solid white;
+    background: transparent;
+    width: 40px;
+}
 .wall{
     background-image: url(11-trump.png);
     height: 300px;

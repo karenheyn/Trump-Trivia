@@ -10,6 +10,9 @@ const wallAudio = document.querySelector('.greatwall')
 const getEmOut = document.querySelector('.getemout')
 const winning = document.querySelector('.winning')
 const tremendous = document.querySelector('.tremendous')
+const reset = document.querySelector('.reset')
+reset.classList.add('hidden')
+
 function fetchThis() {
     fetch("https://api.tronalddump.io/random/quote", {
             headers: {
@@ -159,7 +162,7 @@ class Game {
             choices[i].innerText = board.answers[0][i]
         }
     }
-    changePage(){
+    changePage() {
         winning.play();
         animation.classList.add('hidden')
         board.answers.shift();
@@ -170,6 +173,7 @@ class Game {
         game.playRound();
     }
     checkForMatch() {
+        console.log(choices)
         for (let i = 0; i < choices.length; i++) {
             choices[i].addEventListener('click', function (evt) {
                 evt.preventDefault();
@@ -180,35 +184,35 @@ class Game {
                         fetchThis();
                         break;
                     case 'Marla Maples':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                         break;
                     case '45th':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                         break;
                     case '2 Big Macs, 2 Filet-o-fish, Lg chocolate milkshake':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                     case '3500':
-                            game.changePage();
+                        game.changePage();
                         fetchThis();
                         break;
                     case 'Ghosts Can\'t do it':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                         break;
                     case 'Melania Trump':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                         break;
                     case 'Germs':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                         break;
                     case 'Over 17,000 tweets':
-                            game.changePage();
-                            fetchThis();
+                        game.changePage();
+                        fetchThis();
                         break;
                     case '2009':
                         animation.classList.add('hidden');
@@ -217,8 +221,10 @@ class Game {
                         wallAudio.play();
                         ul.classList.add('hidden');
                         questionDiv.classList.add('hidden');
-                        wall.classList.remove('hidden')
-                        tremendous.classList.remove('hidden')
+                        wall.classList.remove('hidden');
+                        tremendous.classList.remove('hidden');
+                        quote.classList.add('hidden');
+                        reset.classList.remove('hidden');
                         break;
                     default:
                         quote.innerText = 'Donald says: YOUR\'E FIRED!'
@@ -232,6 +238,7 @@ class Game {
             })
         }
     }
+
 }
 
 let board = new Board();
@@ -241,3 +248,29 @@ board.shuffle();
 let game = new Game();
 game.startGame();
 game.checkForMatch();
+
+reset.addEventListener('click', function (evt) {
+    
+    evt.preventDefault();
+    ul.classList.remove('hidden');
+    questionDiv.classList.remove('hidden');
+    wall.classList.add('hidden');
+    tremendous.classList.add('hidden');
+    quote.classList.remove('hidden');
+    reset.classList.add('hidden');
+    delete board
+    let board = new Board();
+    board.makeCardsArray();
+    board.getAnswers();
+    board.shuffle();
+    questionDiv.innerText = board.allCards[0].question
+    for (let i = 0; i < choices.length; i++) {
+        choices[i].innerText = board.answers[0][i]
+    }
+    delete game;
+    let game = new Game();
+    game.startGame();
+    game.checkForMatch();
+    console.log(board.allCards)
+    console.log(board.answers)
+})
