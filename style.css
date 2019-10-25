@@ -215,3 +215,15 @@ header {
 .animatequote{
     animation: blinking 1s infinite;
 }
+
+@media only screen and (max-width: 500px) {
+.question{
+    padding: 10px;
+}
+h1{
+    padding: 40px 40px;
+}
+.question{
+    top: 50%;
+}
+}
