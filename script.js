@@ -15,7 +15,7 @@ const questionNum = document.querySelector('.questionNum')
 reset.classList.add('hidden')
 
 function fetchThis() {
-    fetch("https://api.tronalddump.io/random/quote", {
+    fetch("https://cors-anywhere.herokuapp.com/https://api.tronalddump.io/random/quote", {
             headers: {
                 Accept: "application/hal+json"
             }
