@@ -4,12 +4,19 @@
 
 .reset {
     text-align: center;
-    position: fixed;
-    left: 47%;
-    color: white;
-    border: 3px solid white;
+    position: relative;
+    color: rgb(57, 90, 165);
+    border: none;
     background: transparent;
-    width: 40px;
+    padding: 10px, 20px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 40px;
+    margin-top: 15px;
+
+}
+
+.reset:hover {
+    color: rgb(53, 77, 133);
 }
 
 .questionNum {
@@ -39,7 +46,9 @@ body {
     background-image: url(pawel-czerwinski-O5uri6kQHQQ-unsplash.jpg);
     background-color: #cccccc;
     background-size: cover;
-    height: 700px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
 
 }
 
@@ -55,7 +64,7 @@ h4 {
     color: white;
     font-size: 18px;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     margin-top: 2%;
     font-family: 'Josefin Slab', serif;
@@ -86,10 +95,11 @@ header {
     font-size: 20px;
     height: 50px;
     position: relative;
-    margin-top: 50px;
     min-width: 150px;
-    color: white;
-    z-index: 1;
+    color: rgba(57, 90, 165);
+    margin-top: 30px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bolder;
 }
 
 .list {
@@ -105,7 +115,6 @@ header {
 .tremendous {
     margin: 0 auto;
     text-align: center;
-    padding-top: 40px;
     font-family: 'Fredericka the Great', cursive;
     font-size: 300%;
     color: rgb(189, 0, 33)
@@ -131,10 +140,8 @@ header {
 
 .score {
     position: absolute;
-    right: 2px;
-    top: 3px;
-    height: 30px;
-    width: 30px;
+    right: 3px;
+    top: 5px;
     color: white;
 }
 
@@ -143,7 +150,7 @@ header {
     margin-bottom: 20px;
     color: rgb(39, 62, 114);
     padding-top: 5px;
-    font-size: 26px;
+    font-size: 16px;
     background-color: rgba(255, 255, 255, 0.673);
     font-family: 'Josefin Slab', serif
 }
