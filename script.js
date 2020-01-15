@@ -165,7 +165,7 @@ class Board {
     //shuffles the 2D array, got this algorithm from stack overflow
     for (var k = 0; k < this.answers.length; k++) {
       var i = this.answers[k].length;
-      if (i == 0) return false;
+      if (i === 0) return false;
       else {
         while (--i) {
           var j = Math.floor(Math.random() * (i + 1));
