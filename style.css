@@ -53,8 +53,6 @@ body {
 }
 
 h4 {
-    max-width: 100%;
-    max-height: 100px;
     margin: 0 20px;
 }
 
@@ -65,7 +63,6 @@ h4 {
     font-size: 18px;
     padding: 10px;
     position: relative;
-    width: 100%;
     margin-top: 2%;
     font-family: 'Josefin Slab', serif;
 
@@ -165,7 +162,7 @@ header {
     position: fixed;
     left: 12%;
     z-index: 1;
-    top: 200px;
+    top: 35%
 }
 
 .animation2 {
@@ -262,6 +259,10 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
+    body {
+        background-size: 150%;
+    }
+
     .question {
         padding: 10px;
     }
