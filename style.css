@@ -1,258 +1,253 @@
 * {
-    margin: 0 auto;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .reset {
-    text-align: center;
-    position: relative;
-    color: rgb(57, 90, 165);
-    border: none;
-    background: transparent;
-    padding: 10px, 20px;
-    font-family: 'Josefin Slab', serif;
-    font-size: 40px;
-    margin-top: 15px;
-
+  text-align: center;
+  position: relative;
+  color: rgb(57, 90, 165);
+  border: none;
+  background: transparent;
+  padding: 10px, 20px;
+  font-family: "Josefin Slab", serif;
+  font-size: 40px;
+  margin-top: 15px;
 }
 
 .reset:hover {
-    color: rgb(53, 77, 133);
+  color: rgb(53, 77, 133);
 }
 
 .questionNum {
-    height: 30px;
-    width: 30px;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 25px;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 25px;
 }
 
 .wall {
-    background-image: url(11-trump.png);
-    height: 300px;
-    margin: 0 auto;
-    background-size: cover;
-    padding: 50px 0px;
-
-
+  background-image: url(11-trump.png);
+  height: 300px;
+  margin: 0 auto;
+  background-size: cover;
+  padding: 50px 0px;
 }
 
 body {
-    background-image: url(pawel-czerwinski-O5uri6kQHQQ-unsplash.jpg);
-    background-color: #cccccc;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    margin: 0 auto;
-
+  background-image: url(pawel-czerwinski-O5uri6kQHQQ-unsplash.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: 0 auto;
 }
 
 h4 {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 .question {
-    text-align: center;
-    background-color: rgba(189, 0, 33, .5);
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    position: relative;
-    margin-top: 2%;
-    font-family: 'Josefin Slab', serif;
-
+  text-align: center;
+  background-color: rgba(189, 0, 33, 0.5);
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  position: relative;
+  margin-top: 2%;
+  font-family: "Josefin Slab", serif;
 }
 
 .big {
-    font-style: italic;
-    ;
+  font-style: italic;
 }
 
 h1 {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 
 header {
-    background: rgba(57, 90, 165, .5);
-    width: 100%;
-    font-family: 'Fredericka the Great', cursive;
-    position: relative;
+  background: rgba(57, 90, 165, 0.5);
+  width: 100%;
+  font-family: "Fredericka the Great", cursive;
+  position: relative;
 }
 
 .btn {
-    background: transparent;
-    border: 3px solid white;
-    font-size: 20px;
-    height: 50px;
-    position: relative;
-    min-width: 150px;
-    color: rgba(57, 90, 165);
-    margin-top: 30px;
-    font-family: 'Josefin Slab', serif;
-    font-weight: bolder;
-    z-index: 100;
+  background: transparent;
+  border: 3px solid white;
+  font-size: 20px;
+  height: 50px;
+  position: relative;
+  min-width: 150px;
+  color: rgba(57, 90, 165);
+  margin-top: 30px;
+  font-family: "Josefin Slab", serif;
+  font-weight: bolder;
+  z-index: 100;
 }
 
 .list {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-decoration: none;
-    text-align: center;
-    padding: 0;
-    font-family: 'Josefin Slab', serif
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  font-family: "Josefin Slab", serif;
 }
 
 .tremendous {
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 300%;
-    color: rgb(189, 0, 33)
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 300%;
+  color: rgb(189, 0, 33);
 }
 
 .choices {
-    list-style: none;
-    padding: 10px;
-    color: white;
-    font-size: 20px;
-    background-color: rgba(57, 90, 165, .5);
-
+  list-style: none;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(57, 90, 165, 0.5);
 }
 
 .choices:hover {
-    background-color: rgba(57, 90, 165, .8);
+  background-color: rgba(57, 90, 165, 0.8);
 }
 
 .hidden {
-    display: none
+  display: none;
 }
 
 .score {
-    position: absolute;
-    right: 3px;
-    top: 5px;
-    color: white;
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  color: white;
 }
 
 .quote {
-    text-align: center;
-    margin-bottom: 20px;
-    color: rgb(39, 62, 114);
-    padding-top: 5px;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.673);
-    font-family: 'Josefin Slab', serif
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(39, 62, 114);
+  padding-top: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.673);
+  font-family: "Josefin Slab", serif;
 }
 
 .animation {
-    background-image: url(4-trump.png);
-    height: 121px;
-    width: 80px;
-    background-size: cover;
-    animation: move 5s ease-out;
-    animation-iteration-count: 1;
-    position: fixed;
-    left: 12%;
-    z-index: 10;
+  background-image: url(4-trump.png);
+  height: 121px;
+  width: 80px;
+  background-size: cover;
+  animation: move 5s ease-out;
+  animation-iteration-count: 1;
+  position: fixed;
+  left: 12%;
+  /* z-index: 10; */
 }
 
 .animation2 {
-    background-image: url(19-trump.png);
-    height: 160px;
-    width: 100px;
-    background-size: cover;
-    animation: grow 3s ease-in;
-    animation-iteration-count: 1;
-    position: fixed;
-    left: 12%;
-    z-index: 1;
-    bottom: 10%;
+  background-image: url(19-trump.png);
+  height: 160px;
+  width: 100px;
+  background-size: cover;
+  animation: grow 3s ease-in;
+  animation-iteration-count: 1;
+  position: relative;
+  right: 200px;
+  z-index: 1;
 }
 
 @keyframes move {
-    from {
-        margin-left: 100%;
-        transform: rotate(0deg)
-    }
+  from {
+    margin-left: 100%;
+    transform: rotate(0deg);
+  }
 
-    to {
-        margin-left: 0%;
-        transform: rotate(360deg);
-    }
+  to {
+    margin-left: 0%;
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .faded {
-    animation: fadein 4s;
-    animation-iteration-count: initial;
+  animation: fadein 4s;
+  animation-iteration-count: initial;
 }
 
 @keyframes grow {
-    from {
-        height: 160px;
-        width: 100;
-    }
+  from {
+    height: 160px;
+    width: 100;
+  }
 
-    50% {
-        height: 360px;
-        width: 230px;
-    }
+  50% {
+    height: 360px;
+    width: 230px;
+  }
 
-    to {
-        height: 160px;
-        width: 100px;
-    }
+  to {
+    height: 160px;
+    width: 100px;
+  }
 }
 
 @keyframes movedown {
-    from {
-        margin-top: 0px
-    }
+  from {
+    margin-top: 0px;
+  }
 
-    to {
-        margin-bottom: 100px
-    }
+  to {
+    margin-bottom: 100px;
+  }
 }
 
 @keyframes blinking {
-    0% {
-        color: rgb(189, 0, 33);
-    }
+  0% {
+    color: rgb(189, 0, 33);
+  }
 
-    49% {
-        color: transparent;
-    }
+  49% {
+    color: transparent;
+  }
 
-    50% {
-        color: transparent;
-    }
+  50% {
+    color: transparent;
+  }
 
-    99% {
-        color: transparent;
-    }
+  99% {
+    color: transparent;
+  }
 
-    100% {
-        color: rgb(189, 0, 33)
-    }
+  100% {
+    color: rgb(189, 0, 33);
+  }
 }
 
 .animatequote {
-    animation: blinking 1s infinite;
+  animation: blinking 1s infinite;
 }
 
 /* @media only screen and (max-width: 500px) {
@@ -273,8 +268,7 @@ header {
     }
 } */
 
-
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
     h1 {
         font-size: 60px;
         padding: 50px 50px;
@@ -296,4 +290,4 @@ header {
     .quote {
         font-size: 35px;
     }
-}
+} */
